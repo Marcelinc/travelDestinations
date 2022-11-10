@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-function ListItem({item}) {
+function ListItem({item, navigation}) {
   return (
-    <TouchableOpacity style={styles.listItem}>
+    <TouchableOpacity style={styles.listItem} onPress={() => navigation.navigate('Destination',{item: item})}>
         <View style={styles.listItemView}>
             <Text style={styles.listItemText}>{item.name}</Text>
         </View>
