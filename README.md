@@ -1,4 +1,4 @@
-# travelDestinations
+# travelDestinations - react native app
 
 
 #1 npm install </br>
