@@ -4,7 +4,7 @@
 * [![JavaScript][JavaScript.img]][JavaScript-url]
 * [![ReactNative][ReactNative.img]][ReactNative-url]
 
-###How to run
+###How to run </br>
 #1 npm install </br>
 #2 In android/app/src/main/java/<your package name>/MainActivity.java </br>
 a) add import android.os.Bundle; </br>
