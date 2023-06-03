@@ -1,8 +1,8 @@
 # travelDestinations - react native app
 
 ###Built With
-[![JavaScript][JavaScript-img]][JavaScript-url]
-[![ReactNative][ReactNative.img]][ReactNative-url]
+* [![JavaScript][JavaScript.img]][JavaScript-url]
+* [![ReactNative][ReactNative.img]][ReactNative-url]
 
 ###How to run
 #1 npm install </br>
