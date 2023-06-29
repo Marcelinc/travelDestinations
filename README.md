@@ -17,7 +17,8 @@ protected void onCreate(Bundle savedInstanceState) {</br>
 #3 npx react-native run-android </br>
 
 ![obraz](https://user-images.githubusercontent.com/82237491/200676032-d3e90741-9873-4456-bbbb-2fe1f1dc6f56.png)
-![obraz](https://github.com/Marcelinc/travelDestinations/assets/82237491/6a162fe7-0c0e-4532-bde6-66c909fa50fd)
+![obraz](https://github.com/Marcelinc/travelDestinations/assets/82237491/f69aa8cb-89a8-48db-9a29-964933dbbe64)
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
