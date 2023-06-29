@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import { View, ImageBackground, FlatList, StyleSheet, Alert } from 'react-native'
+import React, {useCallback, useRef, useState} from 'react'
+import { View, ImageBackground, StyleSheet, Alert } from 'react-native'
 import AddDestination from './AddDestination'
 import Header from './Header'
 import ListItem from './ListItem'
 import backgroundImage from '../resource/bg.jpeg'
+import { FlatList, ScrollView } from 'react-native-gesture-handler'
 
 function Home({navigation}) {
 
@@ -13,6 +14,12 @@ function Home({navigation}) {
         {id:3, name: 'Stegastein'},
         {id:4, name: 'Gaularfjellet'},
       ])
+
+    const onDismiss = useCallback((dest) => {
+      setDestinations(destinations => destinations.filter(d => d.id !== dest.id))
+    },[]) 
+
+    const scrollRef = useRef(null)
 
       const addItem = name => {
         let id = destinations.length+1
@@ -27,10 +34,15 @@ function Home({navigation}) {
         <ImageBackground source={backgroundImage} resizeMode='cover' style={styles.image}>
         <Header/>
         <AddDestination addItem={addItem}/>
-        <FlatList 
+        
+        <ScrollView ref={scrollRef} style={styles.list}>
+          {console.log('items')}
+          {destinations.map(item => {console.log(item); return(<ListItem item={item} key={item.id} navigation={navigation} onDismiss={onDismiss} simultaneousHandlers={scrollRef}/>)})}
+        </ScrollView>
+        {/*<FlatList ref={scrollRef}
             data={destinations} style={styles.list}
-            renderItem={({item}) => (<ListItem item={item} navigation={navigation}/>)}
-        />
+            renderItem={({item}) => (<ListItem item={item} navigation={navigation} onDismiss={onDismiss} simultaneousHandlers={scrollRef}/>)}
+        />*/}
         </ImageBackground>
     </View>
   )

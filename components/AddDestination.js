@@ -8,10 +8,15 @@ function AddDestination({addItem}) {
 
     const onChange = textValue => setDestination(textValue)
 
+    const handleAddDestination = () => {
+        addItem(destination)
+        setDestination('')
+    }
+
   return (
     <View style={styles.container}>
-        <TextInput placeholder='Add new one' style={styles.input} onChangeText={onChange}/>
-        <TouchableOpacity style={styles.icon} onPress={() => addItem(destination)}>
+        <TextInput placeholder='Add new one' style={styles.input} onChangeText={onChange} value={destination}/>
+        <TouchableOpacity style={styles.icon} onPress={handleAddDestination}>
             <Icon name="pluscircle" size={30} color="green"/>
         </TouchableOpacity>
     </View>
